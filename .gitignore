@@ -33,7 +33,7 @@ build/
 *.env
 *.ini
 *.cfg
-*.yaml
+config.yaml
 
 # Google API credentials
 token.json
