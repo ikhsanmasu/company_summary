@@ -34,7 +34,12 @@ company_list = spreadsheet.get_values(range_name=f"{company_name_sheet}!A2:A")
 
 # iterate through company names, get their profiles, and summarize them finally writing the results to the spreadsheet
 for index, company in enumerate(company_list):
+    print("-------------------------------------------------------------------------------------------------")
+    print(f"Processing company: {company} ({index + 1}/{len(company_list)})")
     company_information = company_profile.get_profile_section(company=company)
+    print(f"Company information retrieved for {company}: {company_information}")
     company_summary = agent_summary.refine_summarize(company_information)
+    print(f"Company summary for {company}: {company_summary}")
     spreadsheet.write_value(range_name=f"{company_summary_sheet}!A{2 + index}:A{2 + index}", value=company)
     spreadsheet.write_value(range_name=f"{company_summary_sheet}!B{2 + index}:B{2 + index}", value=company_summary)
+    print("All company profiles processed and summaries written to the spreadsheet.\n")

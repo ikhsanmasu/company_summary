@@ -19,7 +19,7 @@ class SpreadsheetAPI:
                     spreadsheetId=self.spreadsheet_id,
                     range=range_name).execute()
                 rows_result = result.get("values", [])
-                print(f"attempt: {6 - attempt} result: {rows_result}")
+                # print(f"attempt: {6 - attempt} result: {rows_result}")
                 attempt -= 1
                 sleep(1)  # Wait for 1 second before retrying
             return [row[0] for row in rows_result]
