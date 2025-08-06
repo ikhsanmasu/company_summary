@@ -28,7 +28,7 @@ This project automates the process of generating company summaries using OpenAI'
 ### 1. Clone the repository
 
 ```sh
-git clone <your-repo-url>
+git clone https://github.com/ikhsanmasu/company_summary.git
 cd company_summary
 ```
 
@@ -106,7 +106,7 @@ This project automates the process of generating company summaries using OpenAI'
 ### 1. Clone the repository
 
 ```sh
-git clone <your-repo-url>
+git clone https://github.com/ikhsanmasu/company_summary.git
 cd company_summary
 ```
 
