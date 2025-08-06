@@ -22,7 +22,7 @@ creds = Credentials.from_service_account_info(
 
 # OpenAI config
 api_key = config["openai"].get("api_key")
-model_name = config["openai"].get("model_name", "gpt-4o")
+model_name = config["openai"].get("model_name", "gpt-o4-mini")
 
 # Initialize objects
 spreadsheet = SpreadsheetAPI(spreadsheet_id=spreadsheet_id, creds=creds)
